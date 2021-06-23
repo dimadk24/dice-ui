@@ -20,7 +20,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:changed": "yarn test --onlyChanged",
+    "test:watch:all": "yarn test --watchAll",
+    "test:watch:changed": "yarn test --watch --onlyChanged",
+    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
+    "check-types": "tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +45,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jest-formatting": "^3.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1"
   }
 }
