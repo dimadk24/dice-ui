@@ -63,11 +63,13 @@ module.exports = {
     ],
     'jest-formatting/padding-around-expect-groups': 'off',
     'consistent-return': 'off',
-    //  we allow 0 warnings, so don't think prettier rules are ignored
+    // we allow 0 warnings, so don't think prettier rules are ignored
     // this is only to show prettier issues as warnings, not errors
     'prettier/prettier': 'warn',
     //  too buggy rule: https://github.com/jest-community/eslint-plugin-jest/issues/203
     'jest/valid-describe': 'off',
+    'jest/consistent-test-it': 'error',
+
     'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/label-has-for': [
       'error',
