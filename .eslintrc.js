@@ -98,6 +98,9 @@ module.exports = {
         components: ['Link'],
       },
     ],
+    // in React 17 there's no need to import React when use JSX
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     // Since we do not use prop-types
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
