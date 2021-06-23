@@ -24,7 +24,7 @@
     "test:changed": "yarn test --onlyChanged",
     "test:watch:all": "yarn test --watchAll",
     "test:watch:changed": "yarn test --watch --onlyChanged",
-    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css}\"",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
     "check-types": "tsc"
   },
