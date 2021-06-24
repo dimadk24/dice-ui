@@ -2043,6 +2043,11 @@
     "@typescript-eslint/types" "4.28.0"
     eslint-visitor-keys "^2.0.0"
 
+"@vkontakte/vkui@^4.9.1":
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-4.9.1.tgz#e481a5e61cfcae071d3b4590c9fbea347fd6f1e0"
+  integrity sha512-epEOwEk1OFw1+ieOE7itwXfhV/QQhJreexTIo5l9EqNX8dkNWneuCNpujAhmXSR07RGLrHENa7ryN4PYRbEhXQ==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
