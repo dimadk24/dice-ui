@@ -1,7 +1,10 @@
 import { Utils } from '../../Utils'
 import { LocalTracker } from './LocalTracker'
+import { MixpanelTracker } from './MixpanelTracker'
 
-const registeredTrackers = Utils.isProductionMode ? [] : [LocalTracker]
+const registeredTrackers = Utils.isProductionMode
+  ? [MixpanelTracker]
+  : [LocalTracker]
 
 function call(method: string, ...args: Array<unknown>) {
   registeredTrackers.forEach((tracker) => {
