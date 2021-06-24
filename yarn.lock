@@ -2120,6 +2120,11 @@
   resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.4.2.tgz#8f8461821b4793bf910b7fc1fba115cc9d72e617"
   integrity sha512-YWC1FEk4/RX6fCR3D/N9fDtaKOhqwZ9vZ259/wlkvI5rXlYkSl+kx6Xn39mDSklW2TbsQjzNqrmF72hKAE7EEA==
 
+"@vkontakte/vkjs@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-0.21.0.tgz#869d3bf56d222502b6a60fadfb84b395ef4df325"
+  integrity sha512-A4xylORqX7fvHoXdTSvdxFB3Sw3p13edQcvs8hu/qPJKsEN05wO7l0qajyxhFOYhR+J1GvGzSR/XCt6PjW8hdA==
+
 "@vkontakte/vkui@^4.9.1":
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-4.9.1.tgz#e481a5e61cfcae071d3b4590c9fbea347fd6f1e0"
