@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { ErrorBoundary } from './components/utils/ErrorBoundary'
+import { AppWrapper } from './components/AppWrapper/AppWrapper'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <AppWrapper />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 )
