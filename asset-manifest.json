@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/dice-ui/static/js/main.fbfe19ac.chunk.js",
-    "main.js.map": "/dice-ui/static/js/main.fbfe19ac.chunk.js.map",
-    "runtime-main.js": "/dice-ui/static/js/runtime-main.371fcfa7.js",
-    "runtime-main.js.map": "/dice-ui/static/js/runtime-main.371fcfa7.js.map",
+    "main.js": "/dice-ui/static/js/main.61e0e870.chunk.js",
+    "main.js.map": "/dice-ui/static/js/main.61e0e870.chunk.js.map",
+    "runtime-main.js": "/dice-ui/static/js/runtime-main.95738f59.js",
+    "runtime-main.js.map": "/dice-ui/static/js/runtime-main.95738f59.js.map",
     "static/css/2.bd167f8d.chunk.css": "/dice-ui/static/css/2.bd167f8d.chunk.css",
-    "static/js/2.4e9f3cc9.chunk.js": "/dice-ui/static/js/2.4e9f3cc9.chunk.js",
-    "static/js/2.4e9f3cc9.chunk.js.map": "/dice-ui/static/js/2.4e9f3cc9.chunk.js.map",
-    "static/js/3.27c25c5c.chunk.js": "/dice-ui/static/js/3.27c25c5c.chunk.js",
-    "static/js/3.27c25c5c.chunk.js.map": "/dice-ui/static/js/3.27c25c5c.chunk.js.map",
+    "static/js/2.9e74391e.chunk.js": "/dice-ui/static/js/2.9e74391e.chunk.js",
+    "static/js/2.9e74391e.chunk.js.map": "/dice-ui/static/js/2.9e74391e.chunk.js.map",
+    "static/js/3.01652e2e.chunk.js": "/dice-ui/static/js/3.01652e2e.chunk.js",
+    "static/js/3.01652e2e.chunk.js.map": "/dice-ui/static/js/3.01652e2e.chunk.js.map",
     "index.html": "/dice-ui/index.html",
     "static/css/2.bd167f8d.chunk.css.map": "/dice-ui/static/css/2.bd167f8d.chunk.css.map",
-    "static/js/2.4e9f3cc9.chunk.js.LICENSE.txt": "/dice-ui/static/js/2.4e9f3cc9.chunk.js.LICENSE.txt"
+    "static/js/2.9e74391e.chunk.js.LICENSE.txt": "/dice-ui/static/js/2.9e74391e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.371fcfa7.js",
+    "static/js/runtime-main.95738f59.js",
     "static/css/2.bd167f8d.chunk.css",
-    "static/js/2.4e9f3cc9.chunk.js",
-    "static/js/main.fbfe19ac.chunk.js"
+    "static/js/2.9e74391e.chunk.js",
+    "static/js/main.61e0e870.chunk.js"
   ]
 }
