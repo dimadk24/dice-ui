@@ -78,6 +78,8 @@ jobs:
     runs-on: ubuntu-20.04
     if: github.ref == 'refs/heads/master'
     needs: [lint, types, test, build]
+    env:
+      REACT_APP_SENTRY_DSN: ${{secrets.REACT_APP_SENTRY_DSN}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
