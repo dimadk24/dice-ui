@@ -13,6 +13,7 @@ import {
   Icon24GearOutline,
   Icon28HelpOutline,
 } from '@vkontakte/icons'
+import DiceHome from '../panels/DiceHome/DiceHome'
 
 type Props = {
   loadingUser: boolean
@@ -24,7 +25,7 @@ const views = [
     title: 'Главная',
     Icon: Icon28Dice5Outline,
     storyId: 'dice',
-    renderView: (): JSX.Element | string => 'dice home',
+    renderView: (): JSX.Element | string => <DiceHome />,
   },
   {
     title: 'Настройки',
