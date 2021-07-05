@@ -1,22 +1,23 @@
 import { Utils } from '../../Utils'
 import { LocalTracker } from './LocalTracker'
 import { MixpanelTracker } from './MixpanelTracker'
+import { TrackerInterface } from './tracker-utils'
 
 const registeredTrackers = Utils.isProductionMode
   ? [MixpanelTracker]
   : [LocalTracker]
 
-function call(method: string, ...args: Array<unknown>) {
+function call<T extends keyof Omit<TrackerInterface, 'AUTOMATIC_OPERATIONS'>>(
+  method: T,
+  ...args: Parameters<TrackerInterface[T]>
+) {
   registeredTrackers.forEach((tracker) => {
     if (
       tracker.AUTOMATIC_OPERATIONS[0] === '*' ||
       tracker.AUTOMATIC_OPERATIONS.includes(method)
     ) {
-      // @ts-ignore
       const fn = tracker[method]
-      if (typeof fn !== 'function') {
-        throw new Error(`Invalid tracker method: ${method}`)
-      }
+      // @ts-ignore
       fn(...args)
     }
   })
