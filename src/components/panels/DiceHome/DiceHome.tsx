@@ -4,12 +4,12 @@ import { Physics } from '@react-three/cannon'
 import { Surface } from './react-three-components/Surface'
 import { Dice } from './react-three-components/Dice/Dice'
 import { DebugInDev } from './react-three-components/DebugInDev'
+import styles from './DiceHome.module.css'
 
 function DiceHome(): JSX.Element {
   return (
-    <div>
+    <div className={styles.canvasWrapper}>
       <Canvas
-        style={{ height: '400px' }}
         onCreated={(threeState) => {
           // eslint-disable-next-line no-param-reassign
           threeState.gl.physicallyCorrectLights = true
