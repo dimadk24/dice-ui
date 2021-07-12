@@ -48,8 +48,9 @@ module.exports = {
         ignoreComments: true,
       },
     ],
-    // just cause non-default exports are awesome
-    'import/prefer-default-export': 'off',
+    'max-params': 'error', // no more than 3 args per function
+    // Please use destruction when want to add more
+    'import/prefer-default-export': 'off', // just cause non-default exports are awesome
     'import/order': 'off',
     'import/extensions': [
       'error',
