@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { Physics } from '@react-three/cannon'
-import { Surface } from './react-three-components/Surface'
+import { Surface } from './react-three-components/Surface/Surface'
 import { Dice } from './react-three-components/Dice/Dice'
 import { DebugInDev } from './react-three-components/DebugInDev'
 import styles from './DiceHome.module.css'
