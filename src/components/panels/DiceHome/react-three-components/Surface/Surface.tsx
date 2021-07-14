@@ -1,31 +1,19 @@
 import { usePlane } from '@react-three/cannon'
-import { Material, MeshBasicMaterial, TextureLoader } from 'three'
-import { useEffect, useState } from 'react'
+import { TextureLoader } from 'three'
 import woodenTableTextureUrl from './wooden-table.jpg'
+import { useLoader } from '@react-three/fiber'
 
 export function Surface(): JSX.Element {
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
     position: [0, -2, 0],
   }))
-  const [material, setMaterial] = useState<Material | undefined>()
-
-  useEffect(() => {
-    const fetchTexture = async () => {
-      const loader = new TextureLoader()
-      const texture = await loader.loadAsync(woodenTableTextureUrl)
-      const fetchedMaterial = new MeshBasicMaterial({
-        map: texture,
-      })
-      setMaterial(fetchedMaterial)
-    }
-
-    fetchTexture()
-  }, [])
+  const texture = useLoader(TextureLoader, woodenTableTextureUrl)
 
   return (
-    <mesh ref={ref} material={material}>
+    <mesh ref={ref}>
       <planeBufferGeometry args={[10, 10]} />
+      <meshBasicMaterial map={texture} />
     </mesh>
   )
 }
