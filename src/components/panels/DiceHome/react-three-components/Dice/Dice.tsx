@@ -4,6 +4,8 @@ import oneDiceUrl from './one-dice.lwo'
 import { MathUtils } from 'three'
 import { useBox } from '@react-three/cannon'
 
+const diceScale = 0.55
+
 export function Dice(): JSX.Element {
   const loadedDice = useLoader(LWOLoader, oneDiceUrl)
   const dice = loadedDice.meshes[0]
@@ -13,12 +15,12 @@ export function Dice(): JSX.Element {
 
   const [ref] = useBox(() => ({
     mass: 0.05,
-    position: [0, 0, 0],
+    position: [0, 2, 0],
     rotation: [0, 0, MathUtils.degToRad(30)],
   }))
 
   return (
-    <mesh ref={ref} scale={[0.8, 0.8, 0.8]}>
+    <mesh ref={ref} scale={[diceScale, diceScale, diceScale]}>
       <boxBufferGeometry />
       <meshBasicMaterial opacity={0} transparent />
       <mesh>

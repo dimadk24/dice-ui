@@ -5,6 +5,7 @@ import { Surface } from './react-three-components/Surface/Surface'
 import { Dice } from './react-three-components/Dice/Dice'
 import { DebugInDev } from './react-three-components/DebugInDev'
 import styles from './DiceHome.module.css'
+import { Euler, MathUtils } from 'three'
 
 function DiceHome(): JSX.Element {
   return (
@@ -13,6 +14,11 @@ function DiceHome(): JSX.Element {
         onCreated={(threeState) => {
           // eslint-disable-next-line no-param-reassign
           threeState.gl.physicallyCorrectLights = true
+          threeState.camera.setRotationFromEuler(
+            new Euler(MathUtils.degToRad(-60), 0, 0)
+          )
+          threeState.camera.translateY(3.5)
+          threeState.camera.translateZ(4.5)
         }}
         gl={{ antialias: true }}
       >
@@ -30,7 +36,11 @@ function DiceHome(): JSX.Element {
           >
             <DebugInDev>
               <color attach="background" args={['lightgrey']} />
-              <directionalLight color="white" position={[0, 1, 3]} />
+              <directionalLight
+                color="white"
+                intensity={2}
+                position={[0, 8, 5]}
+              />
               <Dice />
               <Surface />
             </DebugInDev>
