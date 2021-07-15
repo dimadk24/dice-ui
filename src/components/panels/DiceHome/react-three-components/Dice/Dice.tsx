@@ -22,8 +22,10 @@ export function Dice(): JSX.Element {
   return (
     <mesh ref={ref} scale={[diceScale, diceScale, diceScale]}>
       <boxBufferGeometry />
+      {/* collision box */}
       <meshBasicMaterial opacity={0} transparent />
       <mesh>
+        {/* rendering material that is not affected by collisions */}
         <primitive object={dice} />
       </mesh>
     </mesh>
