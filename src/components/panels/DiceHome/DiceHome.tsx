@@ -38,7 +38,7 @@ function DiceHome(): JSX.Element {
               <color attach="background" args={['lightgrey']} />
               <directionalLight
                 color="white"
-                intensity={2}
+                intensity={2.5}
                 position={[0, 8, 5]}
               />
               <Dice />
