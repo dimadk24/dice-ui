@@ -1,6 +1,6 @@
 import { usePlane } from '@react-three/cannon'
-import { TextureLoader } from 'three'
-import woodenTableTextureUrl from './wooden-table.jpg'
+import { RepeatWrapping, TextureLoader } from 'three'
+import woodenTableTextureUrl from './black-wood.jpeg'
 import { useLoader } from '@react-three/fiber'
 
 export function Surface(): JSX.Element {
@@ -9,10 +9,12 @@ export function Surface(): JSX.Element {
     position: [0, 0, 0],
   }))
   const texture = useLoader(TextureLoader, woodenTableTextureUrl)
+  texture.wrapS = RepeatWrapping
+  texture.repeat.set(4, 1)
 
   return (
     <mesh ref={ref}>
-      <planeBufferGeometry args={[20, 20]} />
+      <planeBufferGeometry args={[40, 20]} />
       <meshBasicMaterial map={texture} />
     </mesh>
   )
