@@ -94,7 +94,7 @@ jobs:
   deploy:
     name: Deploy prod
     runs-on: ubuntu-20.04
-    if: github.ref == 'refs/heads/master'
+#    if: github.ref == 'refs/heads/master'
     needs: [lint-js, lint-styles, types, test, build]
     env:
       REACT_APP_SENTRY_DSN: ${{secrets.REACT_APP_SENTRY_DSN}}
