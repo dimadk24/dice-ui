@@ -20,7 +20,7 @@ function DiceHome(): JSX.Element {
           threeState.camera.translateY(3.5)
           threeState.camera.translateZ(4.5)
         }}
-        gl={{ antialias: true }}
+        gl={{ antialias: false, powerPreference: 'low-power' }}
       >
         <Suspense fallback={null}>
           <Physics
