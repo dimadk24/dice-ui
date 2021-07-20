@@ -20,7 +20,7 @@ function DiceHome(): JSX.Element {
           threeState.camera.translateY(3.5)
           threeState.camera.translateZ(4.5)
         }}
-        gl={{ antialias: true }}
+        gl={{ antialias: false, powerPreference: 'low-power' }}
       >
         <Suspense fallback={null}>
           <Physics
@@ -35,11 +35,11 @@ function DiceHome(): JSX.Element {
             }}
           >
             <DebugInDev>
-              <color attach="background" args={['lightgrey']} />
+              <ambientLight color="white" intensity={1} />
               <directionalLight
-                color="white"
-                intensity={2.5}
-                position={[0, 8, 5]}
+                color="#efdfd5"
+                intensity={3}
+                position={[0, 3, 1]}
               />
               <Dice />
               <Surface />
