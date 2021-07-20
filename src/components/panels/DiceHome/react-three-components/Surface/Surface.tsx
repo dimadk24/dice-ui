@@ -14,7 +14,7 @@ export function Surface(): JSX.Element {
 
   return (
     <mesh ref={ref}>
-      <planeBufferGeometry args={[20, 20]} />
+      <planeBufferGeometry args={[30, 30]} />
       <meshStandardMaterial map={texture} />
     </mesh>
   )

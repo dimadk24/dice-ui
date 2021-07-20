@@ -6,6 +6,7 @@ import { Dice } from './react-three-components/Dice/Dice'
 import { DebugInDev } from './react-three-components/DebugInDev'
 import styles from './DiceHome.module.css'
 import { Euler, MathUtils } from 'three'
+import { Walls } from './react-three-components/Walls/Walls'
 
 function DiceHome(): JSX.Element {
   return (
@@ -43,6 +44,7 @@ function DiceHome(): JSX.Element {
               />
               <Dice />
               <Surface />
+              <Walls />
             </DebugInDev>
           </Physics>
         </Suspense>
