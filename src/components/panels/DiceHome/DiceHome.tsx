@@ -35,7 +35,6 @@ function DiceHome(): JSX.Element {
             }}
           >
             <DebugInDev>
-              <color attach="background" args={['lightgrey']} />
               <directionalLight
                 color="white"
                 intensity={2.5}
