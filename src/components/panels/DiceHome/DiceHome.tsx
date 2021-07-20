@@ -35,10 +35,11 @@ function DiceHome(): JSX.Element {
             }}
           >
             <DebugInDev>
+              <ambientLight color="white" intensity={1} />
               <directionalLight
-                color="white"
-                intensity={2.5}
-                position={[0, 8, 5]}
+                color="#efdfd5"
+                intensity={3}
+                position={[0, 3, 1]}
               />
               <Dice />
               <Surface />
