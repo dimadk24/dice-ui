@@ -27,8 +27,8 @@ function DiceHome(): JSX.Element {
           <Physics
             gravity={[0, -9.82, 0]}
             defaultContactMaterial={{
-              friction: 0.9,
-              restitution: 0.7,
+              friction: 0.1,
+              restitution: 0.6,
               contactEquationStiffness: 1e7,
               contactEquationRelaxation: 1,
               frictionEquationStiffness: 1e7,
