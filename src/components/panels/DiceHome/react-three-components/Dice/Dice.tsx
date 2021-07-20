@@ -1,17 +1,31 @@
-import { useLoader } from '@react-three/fiber'
-import { LWOLoader } from 'three/examples/jsm/loaders/LWOLoader'
-import oneDiceUrl from './one-dice.lwo'
+import diceUrl from './red-dice.obj'
+import diceMaterialUrl from './red-dice.mtl'
 import { MathUtils } from 'three'
 import { useBox } from '@react-three/cannon'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { useEffect, useState } from 'react'
+import { Group } from 'three/src/Three'
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader'
 
 const diceScale = 0.55
 
 export function Dice(): JSX.Element {
-  const loadedDice = useLoader(LWOLoader, oneDiceUrl)
-  const dice = loadedDice.meshes[0]
-  dice.scale.set(0.25, 0.25, 0.25)
-  dice.rotation.set(0, 0, MathUtils.degToRad(-45))
-  dice.position.set(-0.5, -0.5, 0)
+  const [dice, setDice] = useState<Group | null>(null)
+
+  useEffect(() => {
+    async function fetch() {
+      const mtlLoader = new MTLLoader()
+      const mtl = await mtlLoader.loadAsync(diceMaterialUrl)
+      mtl.preload()
+      const objLoader = new OBJLoader()
+      objLoader.setMaterials(mtl)
+      const loadedDice = await objLoader.loadAsync(diceUrl)
+      loadedDice.scale.set(diceScale, diceScale, diceScale)
+      setDice(loadedDice)
+    }
+
+    fetch()
+  }, [])
 
   const [ref] = useBox(() => ({
     mass: 0.05,
@@ -22,12 +36,11 @@ export function Dice(): JSX.Element {
   return (
     <mesh ref={ref} scale={[diceScale, diceScale, diceScale]}>
       <boxBufferGeometry />
-      {/* collision box */}
-      <meshBasicMaterial opacity={0} transparent />
-      <mesh>
-        {/* rendering material that is not affected by collisions */}
-        <primitive object={dice} />
-      </mesh>
+      {dice && (
+        <mesh>
+          <primitive object={dice} />
+        </mesh>
+      )}
     </mesh>
   )
 }
