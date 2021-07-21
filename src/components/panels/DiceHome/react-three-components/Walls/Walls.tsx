@@ -20,6 +20,7 @@ export function Walls(): JSX.Element {
         position={[6.5, 0, 0]}
         key="right"
       />
+      <Wall rotation={[Math.PI / 2, 0, 0]} position={[0, 6, 0]} key="ceiling" />
     </>
   )
 }
