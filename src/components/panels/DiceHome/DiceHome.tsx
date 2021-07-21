@@ -1,14 +1,15 @@
 import { Canvas } from '@react-three/fiber'
-import { Suspense } from 'react'
+import { Suspense, useRef } from 'react'
 import { Physics } from '@react-three/cannon'
 import { Surface } from './react-three-components/Surface/Surface'
-import { Dice } from './react-three-components/Dice/Dice'
+import { Dice, DiceRef } from './react-three-components/Dice/Dice'
 import { DebugInDev } from './react-three-components/DebugInDev'
 import styles from './DiceHome.module.css'
 import { Euler, MathUtils } from 'three'
 import { Walls } from './react-three-components/Walls/Walls'
 
 function DiceHome(): JSX.Element {
+  const diceRef = useRef<DiceRef>(null)
   return (
     <div className={styles.canvasWrapper}>
       <Canvas
@@ -22,6 +23,7 @@ function DiceHome(): JSX.Element {
           threeState.camera.translateZ(4.5)
         }}
         gl={{ antialias: true }}
+        onPointerMissed={() => diceRef.current?.roll()}
       >
         <Suspense fallback={null}>
           <Physics
@@ -42,7 +44,7 @@ function DiceHome(): JSX.Element {
                 intensity={2.5}
                 position={[0, 8, 5]}
               />
-              <Dice />
+              <Dice ref={diceRef} />
               <Surface />
               <Walls />
             </DebugInDev>
