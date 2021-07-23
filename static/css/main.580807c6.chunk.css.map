@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/panels/DiceHome/DiceHome.module.css"],"names":[],"mappings":"AAAA,+BACE,YACF","file":"main.580807c6.chunk.css","sourcesContent":[".canvasWrapper {\n  height: 100vh;\n}\n"]}
