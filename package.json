@@ -78,5 +78,10 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0"
+  },
+  "dependenciesMeta": {
+    "webpack-dev-server": {
+      "unplugged": true
+    }
   }
 }
