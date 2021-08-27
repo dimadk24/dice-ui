@@ -5,14 +5,15 @@
 # dependencies
 /node_modules
 
-# Yarn 2
+# Yarn 2 with zero installs
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-.pnp.*
 
 # testing
 /coverage
