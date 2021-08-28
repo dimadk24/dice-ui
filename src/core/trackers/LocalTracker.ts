@@ -18,3 +18,5 @@ export const LocalTracker: TrackerInterface = createTracker({
     else console.log(`Reach goal ${name} with params`, params)
   },
 })
+
+/* eslint-enable no-console */
