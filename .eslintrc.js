@@ -14,6 +14,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/recommended',
+    'plugin:eslint-comments/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -36,6 +37,7 @@ module.exports = {
     'jest',
     'jest-formatting',
     'jsx-a11y',
+    '@shopify',
   ],
   rules: {
     'max-len': [
@@ -114,5 +116,8 @@ module.exports = {
 
     // typescript
     '@typescript-eslint/ban-ts-comment': 'off',
+
+    '@shopify/typescript/prefer-pascal-case-enums': 'error',
+    '@shopify/typescript/prefer-singular-enums': 'error',
   },
 }
