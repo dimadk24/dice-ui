@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dice-ui/static/css/main.580807c6.chunk.css",
-    "main.js": "/dice-ui/static/js/main.0272e2b1.chunk.js",
-    "main.js.map": "/dice-ui/static/js/main.0272e2b1.chunk.js.map",
+    "main.js": "/dice-ui/static/js/main.c29dae36.chunk.js",
+    "main.js.map": "/dice-ui/static/js/main.c29dae36.chunk.js.map",
     "runtime-main.js": "/dice-ui/static/js/runtime-main.2283df40.js",
     "runtime-main.js.map": "/dice-ui/static/js/runtime-main.2283df40.js.map",
     "static/css/2.1483d2cc.chunk.css": "/dice-ui/static/css/2.1483d2cc.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.1483d2cc.chunk.css",
     "static/js/2.4780ca70.chunk.js",
     "static/css/main.580807c6.chunk.css",
-    "static/js/main.0272e2b1.chunk.js"
+    "static/js/main.c29dae36.chunk.js"
   ]
 }
