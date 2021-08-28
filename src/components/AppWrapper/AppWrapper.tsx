@@ -6,19 +6,19 @@ import { Utils } from '../../Utils'
 import { App } from '../App/App'
 import { WithUser } from '../../core/components/WithUser'
 import { trackers } from '../../core/trackers/trackers'
-import { Themes } from '../../constants'
+import { Theme } from '../../constants'
 import '@vkontakte/vkui/dist/vkui.css'
 
 export function AppWrapper(): JSX.Element {
   const [popout, setPopout] = useState<JSX.Element | null>(null)
-  const [theme, setTheme] = useState<Themes>(Themes.bright_light)
+  const [theme, setTheme] = useState<Theme>(Theme.BrightLight)
 
   useEffect(() => {
     bridge.send('VKWebAppInit')
     bridge.subscribe(({ detail: { type, data } }) => {
       if (type === 'VKWebAppUpdateConfig') {
         // @ts-ignore
-        setTheme(data.scheme || Themes.bright_light)
+        setTheme(data.scheme || Theme.BrightLight)
       }
     })
   }, [])
