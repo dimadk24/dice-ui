@@ -70,6 +70,12 @@ module.exports = {
     //  too buggy rule: https://github.com/jest-community/eslint-plugin-jest/issues/203
     'jest/valid-describe': 'off',
     'jest/consistent-test-it': 'error',
+    'jest/valid-title': [
+      'error',
+      {
+        disallowedWords: ['should'],
+      },
+    ],
 
     'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/label-has-for': [
